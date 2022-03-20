@@ -28,7 +28,7 @@ public class Anime {
     @JsonProperty("name") //Here you tell the name that you really wants
     private String name;
 
-//    @URL //it will try to validate if the URL is valid
-//    @NotNull
-//    private String url;
+    @URL //it will try to validate if the URL is valid
+    @NotNull
+    private String url;
 }
