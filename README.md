@@ -57,7 +57,7 @@ getting the desired results.
 
 - Inspiration
     - William Suane, the one responsible for all of this resource available for free for the whole community Java.
-    - Caio Costa, my friend and professor and responsible for having said that following William's videos would help me in my development.
+    - Caio Costa, my friend and professor and responsible for having said that following William's videos would help in my development.
 - References
     - [Youtube - DevDojo Academy](https://www.youtube.com/playlist?list=PL0Un1HNdB4jHTXBeJ8u3Kaz0NMxuMkmOY) - Channel on YT
     - [Youtube - Caio Rodrigues - BackEnd Java](https://www.youtube.com/c/CaioRodriguesBackEndJava) - Channel on YT
