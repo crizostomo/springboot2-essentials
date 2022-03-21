@@ -24,15 +24,17 @@ public class AnimeController {
     private final Utils dateUtil;
     private final AnimeService animeService;
 
-//    public AnimeController(DateUtil dateUtil) {
-//        this.dateUtil = dateUtil;
-//    }
-
     @GetMapping
     public ResponseEntity<Page<Anime>> listAll(Pageable pageable){
         log.info("formatting the date {}", dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
         return ResponseEntity.ok(animeService.listAll(pageable));
     }
+
+//    @GetMapping
+//    public ResponseEntity<List<Anime>> listAll(Pageable pageable){
+//        log.info("formatting the date {}", dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
+//        return ResponseEntity.ok(animeService.listAll());
+//    }
 
     //http://localhost:8080/animes?page=0&size=5
 

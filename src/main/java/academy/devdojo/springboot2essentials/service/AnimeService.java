@@ -29,10 +29,14 @@ public class AnimeService {
 //                new Anime(2,"Bersek"),
 //                new Anime(3,"Boku no Hero")));
 //    }
-
+//
     public Page<Anime> listAll(Pageable pageable){
         return animeRepository.findAll(pageable);
     }
+
+//    public List<Anime> listAll(){
+//        return animeRepository.findAll();
+//    }
 
     public List<Anime> findByName(String name){
         return animeRepository.findByName(name);

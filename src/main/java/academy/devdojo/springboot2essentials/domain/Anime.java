@@ -3,6 +3,7 @@ package academy.devdojo.springboot2essentials.domain;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.URL;
@@ -17,6 +18,7 @@ import javax.validation.constraints.NotEmpty;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Builder
 public class Anime {
 
     @Id
@@ -27,8 +29,8 @@ public class Anime {
     @NotEmpty(message = "The name of this anime cannot be empty")
     @JsonProperty("name") //Here you tell the name that you really wants
     private String name;
-
-    @URL //it will try to validate if the URL is valid
-    @NotNull
-    private String url;
+//
+//    @URL //it will try to validate if the URL is valid
+//    @NotNull
+//    private String url;
 }
