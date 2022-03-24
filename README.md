@@ -26,12 +26,12 @@ What you need to install/have installed and how to install them.
 - IDE - Intellij
 - Postman (this is a plus)
 - docker
-- Have the MySQL Workbench installed in your machine (pre-requisite to have installed beforehand) 
+- Have the MySQL Workbench installed in your machine
 ```
 
 ### Installing
 
-All of these programmes can be easily found by searching them on Google, since these versions can be updated I will not be displaying a specific link for them.
+All of these programmes can be easily found by Googling them, since these versions can be updated I will not be displaying a specific link for them.
 
 
 ## 🔧 Running the tests and Usage <a name = "usage"></a>

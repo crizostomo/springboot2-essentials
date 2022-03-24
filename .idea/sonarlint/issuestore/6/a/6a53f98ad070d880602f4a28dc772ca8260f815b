@@ -1,0 +1,13 @@
+
+W
+java:S1854"<Remove this useless assignment to local variable "overlord".(âíøğùÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(´Ø±Áıÿÿÿÿ
+H
+java:S1481"-Remove this unused "overlord" local variable.(âíøğùÿÿÿÿ
+V	java:S125""<This block of commented-out lines of code should be removed.(†¥á‘ÿÿÿÿÿ
+Q
+java:S1144D"<Remove this unused private "testGetWithRestTemplate" method.(Æ–¹+
+
+java:S1192"lDefine a constant instead of duplicating this literal "http://localhost:8080/animes?sort=name,desc" 3 times.(ÄÛ“!
+c
+java:S2259."MA "NullPointerException" could be thrown; "steinsGateSaved" is nullable here.(ìæŠœ
