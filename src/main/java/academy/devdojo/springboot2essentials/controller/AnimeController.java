@@ -21,12 +21,11 @@ import java.util.List;
 @RequiredArgsConstructor
 public class AnimeController {
 
-    private final Utils dateUtil;
+//    private final Utils dateUtil;
     private final AnimeService animeService;
 
     @GetMapping
     public ResponseEntity<Page<Anime>> listAll(Pageable pageable){
-        log.info("formatting the date {}", dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
         return ResponseEntity.ok(animeService.listAll(pageable));
     }
 

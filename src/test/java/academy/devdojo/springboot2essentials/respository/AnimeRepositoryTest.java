@@ -1,6 +1,7 @@
 package academy.devdojo.springboot2essentials.respository;
 
 import academy.devdojo.springboot2essentials.domain.Anime;
+import academy.devdojo.springboot2essentials.respository.util.AnimeCreator;
 import org.assertj.core.api.Assertions;
 import org.hibernate.exception.ConstraintViolationException;
 import org.junit.jupiter.api.DisplayName;
@@ -26,7 +27,7 @@ class AnimeRepositoryTest {
     @Test
     @DisplayName("Save creates anime when successful")
     public void save_PersistAnime_WhenSuccessful(){
-        Anime anime = createAnime();
+        Anime anime = AnimeCreator.createAnimeToBeSaved();
 
         Anime savedAnime = this.animeRepository.save(anime);
         Assertions.assertThat(savedAnime.getId()).isNotNull();
@@ -37,7 +38,7 @@ class AnimeRepositoryTest {
     @Test
     @DisplayName("Save updates anime when successful")
     public void save_UpdateAnime_WhenSuccessful(){
-        Anime anime = createAnime();
+        Anime anime = AnimeCreator.createAnimeToBeSaved();
 
         Anime savedAnime = this.animeRepository.save(anime);
 
@@ -53,7 +54,7 @@ class AnimeRepositoryTest {
     @Test
     @DisplayName("Delete removes anime when successful")
     public void delete_RemoveAnime_WhenSuccessful(){
-        Anime anime = createAnime();
+        Anime anime = AnimeCreator.createAnimeToBeSaved();
 
         Anime savedAnime = this.animeRepository.save(anime);
 
@@ -68,7 +69,7 @@ class AnimeRepositoryTest {
     @Test
     @DisplayName("Find by name returns anime when successful")
     public void findByName_ReturnAnimes_WhenSuccessful(){
-        Anime anime = createAnime();
+        Anime anime = AnimeCreator.createAnimeToBeSaved();
 
         Anime savedAnime = this.animeRepository.save(anime);
 
@@ -103,11 +104,5 @@ class AnimeRepositoryTest {
         Assertions.assertThatExceptionOfType(ConstraintViolationException.class)
                 .isThrownBy(()-> animeRepository.save(anime))
                 .withMessageContaining("The name of this anime cannot be empty");
-    }
-
-    private Anime createAnime(){
-        return Anime.builder()
-                .name("Tensei Shitara")
-                .build();
     }
 }
