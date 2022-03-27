@@ -1,0 +1,17 @@
+
+9
+java:S5786"Remove this 'public' modifier.(Ÿ”ËÅþÿÿÿÿ
+3
+java:S5786("Remove this 'public' modifier.(—¾w
+4
+java:S57868"Remove this 'public' modifier.(ÎðŒÍ
+@
+java:S5786G"Remove this 'public' modifier.(Ó£¾õùÿÿÿÿ8ŸÜ”•ü/
+@
+java:S5786V"Remove this 'public' modifier.(¿®¢ÿÿÿÿÿ8ŸÜ”•ü/
+:
+java:S5786a"Remove this 'public' modifier.(¹¨K8ŸÜ”•ü/
+p
+java:S5838A"NUse assertThat(actual).isNotPresent() or assertThat(actual).isEmpty() instead.(§Ô’ûÿÿÿÿ8¢Ü”•ü/
+Y
+java:S5853P">Join these multiple assertions subject to one assertion chain.(Âýá·ùÿÿÿÿ

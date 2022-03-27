@@ -81,7 +81,6 @@ public class SpringClient {
     private static HttpHeaders createJsonHeader(){
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.setContentType(MediaType.APPLICATION_JSON);
-
         return httpHeaders;
     }
 }
