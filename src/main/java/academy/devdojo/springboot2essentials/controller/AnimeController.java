@@ -3,6 +3,10 @@ package academy.devdojo.springboot2essentials.controller;
 import academy.devdojo.springboot2essentials.domain.Anime;
 import academy.devdojo.springboot2essentials.service.AnimeService;
 import academy.devdojo.springboot2essentials.util.Utils;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -28,6 +32,9 @@ public class AnimeController {
     private final AnimeService animeService;
 
     @GetMapping
+    @Operation(summary = "List all animes paginated and sorted",
+    description = "To use pagination and sort add the params ?page='number'&sort='field' to the url",
+    tags = {"anime"})
     public ResponseEntity<Page<Anime>> listAll(Pageable pageable){
         return ResponseEntity.ok(animeService.listAll(pageable));
     }
@@ -41,7 +48,7 @@ public class AnimeController {
     //http://localhost:8080/animes?page=0&size=5
 
     @GetMapping(path = "/{id}")
-    @PreAuthorize("hasRole('ADMIN')")
+//    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<Anime> findById(@PathVariable int id, @AuthenticationPrincipal UserDetails userDetails){
         log.info("User logged in {}",userDetails);
         return ResponseEntity.ok(animeService.findById(id));
@@ -59,7 +66,10 @@ public class AnimeController {
     }
 
     @DeleteMapping(path = "/{id}")
-    @PreAuthorize("hasRole('ADMIN')")
+//    @PreAuthorize("hasRole('ADMIN')")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "204", description = "Successful operation")
+    })
     public ResponseEntity<Void> delete(@PathVariable int id){
         animeService.delete(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
